@@ -100,7 +100,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             if (isMobile) onToggleCollapse();
           }}
           className={`w-full bg-gradient-to-r from-teal-500 to-purple-500 text-white py-2 px-4 rounded-lg hover:from-teal-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2 ${
-            isCollapsed ? 'px-0' : ''
+            isCollapsed ? 'px-1' : ''
           }`}
           title={isCollapsed ? 'New Chat' : ''}
         >

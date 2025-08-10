@@ -190,21 +190,21 @@ const handleVoiceToggle = () => {
                 message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''
               }`}
             >
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+              <div className={`w-0 h-0 rounded-full flex items-center justify-center flex-shrink-0 ${
                 message.role === 'user'
                   ? 'bg-gradient-to-r from-purple-500 to-pink-500'
                   : 'bg-gradient-to-r from-teal-500 to-blue-500'
               }`}>
                 {message.role === 'user' ? (
-                  <UserIcon className="w-4 h-4 text-white" />
+                  <UserIcon className="w-0 h-0 text-white" />
                 ) : (
-                  <Bot className="w-4 h-4 text-white" />
+                  <Bot className="w-0 h-0 text-white" />
                 )}
               </div>
               <div className={`flex-1 max-w-3xl ${
                 message.role === 'user' ? 'text-right' : ''
               }`}>
-                <div className={`inline-block p-4 rounded-2xl ${
+                <div className={`inline-block px-3 py-2 rounded-2xl ${
                   message.role === 'user'
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
@@ -240,7 +240,6 @@ const handleVoiceToggle = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
       <div className="border-t border-gray-200 dark:border-gray-700 p-4">
         <form onSubmit={handleSubmit} className="flex items-end space-x-2">
           <div className="flex-1 relative">
@@ -249,7 +248,7 @@ const handleVoiceToggle = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Describe your symptoms, how you're feeling, or ask a health-related question..."
+              placeholder="Ask any health-related question..."
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors max-h-32"
               rows={1}
               disabled={isLoading}
