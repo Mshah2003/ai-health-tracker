@@ -100,7 +100,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             if (isMobile) onToggleCollapse();
           }}
           className={`w-full bg-gradient-to-r from-teal-500 to-purple-500 text-white py-2 px-4 rounded-lg hover:from-teal-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2 ${
-            isCollapsed ? 'px-1' : ''
+            isCollapsed ? 'px-0' : ''
           }`}
           title={isCollapsed ? 'New Chat' : ''}
         >
@@ -181,18 +181,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       {/* Settings */}
-      {/* <div className="border-t border-gray-200 dark:border-gray-700 p-4 space-y-2">
-        <button
-          onClick={() => setShowSettings(!showSettings)}
-          className={`w-full flex items-center space-x-3 p-3 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors ${
-            isCollapsed ? 'justify-center' : ''
-          }`}
-          title={isCollapsed ? 'Settings' : ''}
-        >
-          <Settings className="w-5 h-5" />
-          {!isCollapsed && <span>Settings</span>}
-        </button> */}
-
           <div className="space-y-2 px-2 border-x-2 border-gray-200 dark:border-gray-700">
             <button
               onClick={onEditProfile}
@@ -214,6 +202,5 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         )}
       </div>
-    // </div>
   );
 };
