@@ -1,8 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { UserProfile, Message } from '../types';
 
-// Note: In production, this should be in environment variables
-const apiKey = ''; // Will be set via initializeGemini
+const apiKey = '';
 
 let genAI: GoogleGenerativeAI | null = null;
 
@@ -83,7 +82,7 @@ export const generateReport = async (
     throw new Error('Gemini AI not initialized. Please check your API key configuration.');
   }
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
   const prompt = `Generate a comprehensive health report based on the following symptom tracking data:
 
