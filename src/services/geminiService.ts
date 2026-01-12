@@ -27,7 +27,7 @@ export const generateResponse = async (
     throw new Error('Gemini AI not initialized. Please check your API key configuration.');
   }
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
   const context = `You are a helpful AI health assistant for symptom tracking. 
 User Profile: Age: ${userProfile.age || 'not specified'}, Gender: ${userProfile.gender || 'not specified'}
